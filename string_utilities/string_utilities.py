@@ -1,5 +1,8 @@
+def string_aggregator(l: list, sep="") -> str:
+  return sep.join(l)
+
 def get_string_separators_changed(s, old_sep=" ", new_sep="-"):
-    return new_sep.join(s.split(old_sep))
+    return string_aggregator(s.split(old_sep), new_sep)
 
 
 if __name__ == "__main__":
